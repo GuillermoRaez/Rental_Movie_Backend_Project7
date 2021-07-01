@@ -20,5 +20,5 @@ const sequelize = new Sequelize(
 );
 
 module.exports = sequelize.authenticate().then((db)=>{
-    console.log('TeamAG connection succesfull'); return db;
+    console.log('Blooper Rental Service Online'); return db;
 });

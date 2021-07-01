@@ -15,7 +15,7 @@ router.post('/', admin , async(req, res) => {
 });
 
 // Endpoint de Alta de Usuario (C) -> POST
-router.post('/create', async(req, res) => {
+router.post('/register', async(req, res) => {
     try {
         const id = await userController.signUpUser(req.body);
         const status = 'success';
@@ -28,7 +28,7 @@ router.post('/create', async(req, res) => {
 })
 
 // Endpoint de Modificación de datos (U) -> UPDATE
-router.put('/', authenticate, async (req,res) => {
+router.put('/modify', authenticate, async (req,res) => {
     try{
         const bodyData = req.body;
         res.json(await userController.modifyUser(bodyData)); 
